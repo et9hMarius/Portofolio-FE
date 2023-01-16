@@ -1,0 +1,31 @@
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$light_blue: #a8d0e6;
+$blue: #374785;
+$dark_blue: #060b15;
+$white: #f0f0f0;
+$black: #102526;
+$grey: #242424;
+
+.four {
+  background-color: $dark_blue;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  .cards {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 1.5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    * {
+      transition: all 0.25s ease-in-out;
+    }
+  }
+}

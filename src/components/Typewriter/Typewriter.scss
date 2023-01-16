@@ -1,0 +1,30 @@
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$light_blue: #a8d0e6;
+$blue: #374785;
+$dark_blue: #060b15;
+$white: #f0f0f0;
+$black: #102526;
+$grey: #242424;
+
+.typewriter {
+  .blink::after {
+    content: "";
+    width: 2px;
+    margin-left: 0.5rem;
+    height: 1.6rem;
+    background: $light_blue;
+    position: absolute;
+    top: 0.25rem;
+    display: inline-block;
+    animation: cursor-blink 1.5s steps(2) infinite;
+  }
+  .blink {
+    position: relative;
+    @keyframes cursor-blink {
+      0% {
+        opacity: 0;
+      }
+    }
+  }
+}

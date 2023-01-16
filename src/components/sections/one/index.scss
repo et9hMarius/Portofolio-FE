@@ -1,0 +1,57 @@
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$light_blue: #a8d0e6;
+$blue: #374785;
+$dark_blue: #060b15;
+$white: #f0f0f0;
+$black: #102526;
+$grey: #242424;
+
+.one {
+  background-color: $dark_blue;
+  padding-bottom: 25px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .section-title {
+    padding-top: 15%;
+
+    .name {
+      color: $white;
+      text-transform: uppercase;
+
+      font-family: Roboto;
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.19em;
+    }
+
+    .lastname {
+      padding-left: 9.25rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: $white;
+      text-transform: lowercase;
+      font-family: Roboto;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.4rem;
+    }
+  }
+  .arrow {
+    padding-bottom: 25px;
+    position: absolute;
+    bottom: 0px;
+    color: $white;
+    transform: translateY(0px);
+    transition: all 0.25s ease-in-out;
+  }
+
+  .scrolled {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+}

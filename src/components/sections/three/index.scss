@@ -1,0 +1,41 @@
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$light_blue: #a8d0e6;
+$blue: #374785;
+$dark_blue: #060b15;
+$white: #f0f0f0;
+$black: #102526;
+$grey: #242424;
+
+.three {
+  background-color: $dark_blue;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .title-box {
+    position: relative;
+    margin-top: 20rem;
+    display: flex;
+    justify-content: center;
+    .title {
+      margin-top: 60%;
+      z-index: 2;
+
+      color: $white;
+      text-transform: uppercase;
+
+      font-family: Roboto;
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.19em;
+      text-shadow: -1px -1px 0 $dark_blue, 1px -1px 0 $dark_blue,
+        -1px 1px 0 $dark_blue, 1px 1px 0 $dark_blue;
+    }
+    .hand-wrapper {
+      .hand {
+        width: 25rem;
+      }
+    }
+  }
+}

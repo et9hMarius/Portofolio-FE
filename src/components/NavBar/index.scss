@@ -1,0 +1,75 @@
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$light_blue: #a8d0e6;
+$blue: #374785;
+$dark_blue: #060b15;
+$white: #f0f0f0;
+$black: #102526;
+$grey: #242424;
+
+.NavBar {
+  background: #060b155f;
+  //box shadow bellow #060b155f
+  box-shadow: 0px 4px 4px #060b155f;
+
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0px;
+
+  a {
+    cursor: pointer;
+  }
+
+  .section-wrapper {
+    .link {
+      padding: 20px 0;
+    }
+    .link-one {
+      grid-column: 10;
+    }
+    .link-two {
+      grid-column: 11;
+      position: relative;
+      z-index: 20;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      position: absolute;
+      top: 0.25rem;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .hide-list {
+      animation: slideOutList 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+
+    .show-list {
+      animation: slideInList 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+    }
+
+    @keyframes slideOutList {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInList {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+    }
+  }
+}

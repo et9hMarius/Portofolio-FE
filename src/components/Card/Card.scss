@@ -1,0 +1,95 @@
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$light_blue: #a8d0e6;
+$blue: #374785;
+$dark_blue: #060b15;
+$white: #f0f0f0;
+$black: #102526;
+$grey: #242424;
+
+.Card {
+  background: #111e3977;
+  height: fit-content;
+  width: 30vw;
+  -webkit-clip-path: polygon(25% 0%, -75% 100%, 100% 100%, 75% 100%, 175% 0%);
+  clip-path: polygon(25% 0%, -75% 100%, 100% 100%, 75% 100%, 175% 0%);
+  .card {
+    background: #a8d0e683;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    color: $white;
+    text-decoration: none;
+    box-shadow: rgba(black, 0.19) 0 0 8px 0;
+    border-radius: 4px;
+
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+    span {
+      display: block;
+    }
+    .card-summary {
+      padding: 5% 5% 3% 5%;
+    }
+    .card-header {
+      position: relative;
+      height: 175px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(white, 0.15);
+      background-blend-mode: overlay;
+      border-radius: 4px 4px 0 0;
+      &:hover,
+      &:focus {
+        background-color: rgba(white, 0);
+      }
+    }
+    .card-title {
+      background: $dark_blue;
+      padding: 3.5% 0 2.5% 0;
+      color: white;
+      font-family: "Roboto Condensed", sans-serif;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      h3 {
+        font-size: 1.2em;
+        line-height: 1.2;
+        padding: 0 3.5%;
+        margin: 0;
+      }
+    }
+    .card-meta {
+      max-height: 0;
+      overflow: hidden;
+      color: $white;
+      font-size: 0.78em;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 10%;
+      padding: 0 5%;
+    }
+    &:hover,
+    &:focus {
+      background: white;
+      box-shadow: rgba(black, 0.45) 0px 0px 20px 0px;
+      .card-title {
+        background: $dark_blue;
+        opacity: 0.9;
+      }
+      .card-meta {
+        max-height: 1em;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

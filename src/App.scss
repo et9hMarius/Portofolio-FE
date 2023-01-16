@@ -1,0 +1,28 @@
+.App {
+  font-family: "Roboto";
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .section-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .divider {
+    height: 150px;
+  }
+
+  .unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+  }
+}

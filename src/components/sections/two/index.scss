@@ -1,0 +1,77 @@
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$light_blue: #a8d0e6;
+$blue: #374785;
+$dark_blue: #060b15;
+$white: #f0f0f0;
+$black: #102526;
+$grey: #242424;
+
+.two {
+  position: relative;
+  background-image: $grey;
+  background-size: contain;
+  height: 2000px;
+  margin: -150px 0 -150px;
+  canvas {
+    height: 100%;
+    width: 100%;
+  }
+  .quote {
+    opacity: 0.4;
+    line-height: 90%;
+    font-family: "Roboto Mono";
+    position: absolute;
+    width: 100%;
+    font-size: 18vw;
+    text-align: center;
+    color: $grey;
+  }
+  .section-wrapper {
+    top: 0;
+    display: grid;
+    position: absolute;
+    align-content: flex-start;
+    z-index: 2;
+
+    .hidden {
+      opacity: 0;
+    }
+    .card {
+      margin: 5rem 0;
+      width: 30vw;
+      height: fit-content;
+      background: rgba(0, 7, 22, 0.664);
+      border-radius: 20px;
+      padding: 0.5rem;
+      transition: all 0.5s ease-in-out;
+      .card-title {
+        font-family: "Roboto Mono";
+        font-size: 1.5rem;
+        color: $white;
+        padding: 1rem;
+        text-transform: uppercase;
+      }
+      .card-content {
+        text-align: justify;
+        .card-content-text {
+          font-family: "Roboto Mono";
+          font-size: 1rem;
+          color: $white;
+          padding: 1rem;
+          div {
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .left {
+      grid-column: 2/6;
+    }
+
+    .right {
+      grid-column: 10/12;
+    }
+  }
+}
