@@ -197,19 +197,19 @@ export default function Two() {
       <div className="section-wrapper">
         <div
           id="one"
-          className="card right hidden typewriter"
+          className="card-info right hidden typewriter"
           style={{ marginTop: "200px" }}
         >
-          <div className="card-title ">
+          <div className="card-info-title ">
             <Typewriter
               blink={true}
               timer={300}
-              string="MIL BEI ?"
+              string="HOW ?"
               start={oneStart}
             />
           </div>
-          <div className="card-content">
-            <div className="card-content-text">
+          <div className="card-info-content">
+            <div className="card-info-content-text">
               <div className={oneText ? "" : "hidden"}>
                 "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -222,17 +222,17 @@ export default function Two() {
             </div>
           </div>
         </div>
-        <div id="two" className="card left hidden typewriter">
-          <div className="card-title ">
+        <div id="two" className="card-info left hidden typewriter">
+          <div className="card-info-title ">
             <Typewriter
               blink={true}
               timer={300}
-              string="MIL COI ?"
+              string="WHY ?"
               start={twoStart}
             />
           </div>
-          <div className="card-content hidden-text ">
-            <div className="card-content-text">
+          <div className="card-info-content hidden-text ">
+            <div className="card-info-content-text">
               <div className={twoText ? "" : "hidden"}>
                 "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -249,18 +249,18 @@ export default function Two() {
         <div
           id="three"
           style={{ marginTop: "550px" }}
-          className="card right hidden typewriter"
+          className="card-info right hidden typewriter"
         >
-          <div className="card-title ">
+          <div className="card-info-title ">
             <Typewriter
               blink={true}
               timer={300}
-              string="WTF ?"
+              string="WHEN ?"
               start={threeStart}
             />
           </div>
-          <div className={"card-content"}>
-            <div className="card-content-text">
+          <div className={"card-info-content"}>
+            <div className="card-info-content-text">
               <div className={threeText ? "" : "hidden"}>
                 "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -273,8 +273,8 @@ export default function Two() {
             </div>
           </div>
         </div>
-        <div id="four" className="card left hidden typewriter">
-          <div className="card-title ">
+        <div id="four" className="card-info left hidden typewriter">
+          <div className="card-info-title ">
             <Typewriter
               blink={true}
               timer={300}
@@ -282,8 +282,8 @@ export default function Two() {
               start={fourStart}
             />
           </div>
-          <div className="card-content hidden-text ">
-            <div className="card-content-text">
+          <div className="card-info-content hidden-text ">
+            <div className="card-info-content-text">
               <div className={fourText ? "" : "hidden"}>
                 "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa

@@ -6,24 +6,47 @@ const cardData = [
     src: "/cards/card1.png",
     title: "title",
     summary: "summary",
-    meta: "meta",
+    subtitle: "subtitle",
+  },
+  {
+    src: "/cards/card1.png",
+    title: "title",
+    summary: "summary",
+    subtitle: "subtitle",
+  },
+  {
+    src: "/cards/card1.png",
+    title: "title",
+    summary: "summary",
+    subtitle: "subtitle",
+  },
+  {
+    src: "/cards/card1.png",
+    title: "title",
+    summary: "summary",
+    subtitle: "subtitle",
+  },
+  {
+    src: "/cards/card1.png",
+    title: "title",
+    summary: "summary",
+    subtitle: "subtitle",
   },
 ];
 export default function Four() {
   return (
     <div className="four">
-      <div className="section-wrapper">
-        <div className="cards">
-          {cardData.map((card) => (
-            <Card
-              key={card.title}
-              src={card.src}
-              title={card.title}
-              summary={card.summary}
-              meta={card.meta}
-            />
-          ))}
-        </div>
+      <div className="card-wrapper">
+        {cardData.map((card, index) => (
+          <Card
+            key={card.title}
+            id={index}
+            src={card.src}
+            title={card.title}
+            subtitle={card.subtitle}
+            summary={card.summary}
+          />
+        ))}
       </div>
     </div>
   );

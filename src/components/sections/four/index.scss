@@ -8,24 +8,82 @@ $black: #102526;
 $grey: #242424;
 
 .four {
-  background-color: $dark_blue;
-  height: 100vh;
+  background: transparent;
+  margin-top: -10vh;
   position: relative;
   display: flex;
-  .cards {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    padding: 1.5%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    * {
-      transition: all 0.25s ease-in-out;
+
+  @mixin mq-xs {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+
+  @mixin mq-sm {
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+
+  @mixin mq-md {
+    @media (min-width: 720px) {
+      @content;
+    }
+  }
+
+  @mixin mq-lg {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  }
+
+  $border: 1px solid rgba(191, 191, 191, 0.4);
+  $items: 5;
+  $rows: ceil($items/2);
+
+  /* Card sizing */
+
+  $card-height: 400px;
+  $card-width: 450px;
+  $inner-margin: 15px;
+  $number-size: 35px;
+  $stagger: 180px;
+  $outer-margin: 90px;
+  $marker-size: 9px;
+
+  /* Colors */
+
+  $timeline: $grey;
+
+  /* Calculations */
+
+  $container-height: $rows * ($card-height + $outer-margin) + $stagger;
+  $container-width: $card-width * 2 + $outer-margin * 3;
+  $head-height: $number-size + 50;
+  $body-height: $card-height - $head-height;
+  $marker-dist: $card-width + $outer-margin/2 - $marker-size/2;
+
+  .card-wrapper {
+    position: relative;
+    margin: auto;
+    @include mq-lg {
+      display: flex;
+      flex-flow: column wrap;
+      width: $container-width;
+      height: $container-height;
+      margin: 0 auto;
+    }
+    &::after {
+      z-index: 1;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      border-left: $border;
+      @include mq-lg {
+        border-left: 1px solid $timeline;
+      }
     }
   }
 }
