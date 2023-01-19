@@ -8,6 +8,10 @@ $black: #102526;
 $grey: #242424;
 
 .four {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  backdrop-filter: contrast(-40%);
   background: transparent;
   margin-top: -10vh;
   position: relative;
