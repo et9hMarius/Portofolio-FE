@@ -7,7 +7,19 @@ $white: #f0f0f0;
 $black: #102526;
 $grey: #242424;
 
+#navbar-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  background: #060b155f;
+  //box shadow above #060b155f
+  box-shadow: 0px -40px 20px #060b155f;
+  height: 10vh;
+}
+
 .NavBar {
+  color: #d1d1d1;
   background: #060b155f;
   //box shadow bellow #060b155f
   box-shadow: 0px 4px 4px #060b155f;
@@ -18,28 +30,46 @@ $grey: #242424;
   top: 0px;
 
   a {
-    color: $white;
     cursor: pointer;
   }
 
   .section-wrapper {
+    * {
+      transition: color 0.25s ease-in-out;
+    }
     .link {
       padding: 20px 0;
     }
     .link-one {
       grid-column: 16;
+      a {
+        &:hover {
+          color: white;
+        }
+      }
     }
     .link-two {
       grid-column: 17;
       position: relative;
       z-index: 20;
+      &:hover {
+        color: white;
+      }
     }
     ul {
       list-style-type: none;
       padding: 0;
       position: absolute;
-      top: 0.25rem;
+      top: 0rem;
       transition: all 0.5s ease-in-out;
+
+      li {
+        padding: 0.2rem 0;
+        cursor: pointer;
+        &:hover {
+          color: white;
+        }
+      }
     }
 
     .hide-list {
@@ -57,7 +87,7 @@ $grey: #242424;
 
     @keyframes slideOutList {
       0% {
-        transform: translateY(100%);
+        transform: translateY(80%);
       }
       100% {
         transform: translateY(0);
@@ -69,7 +99,7 @@ $grey: #242424;
         transform: translateY(0);
       }
       100% {
-        transform: translateY(100%);
+        transform: translateY(80%);
       }
     }
   }

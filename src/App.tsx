@@ -21,10 +21,8 @@ import Three from "./components/sections/three";
 import Four from "./components/sections/four";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
+    <div className="App" id="app">
       <NavBar />
       <One />
       <OneTwo />

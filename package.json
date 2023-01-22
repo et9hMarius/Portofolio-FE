@@ -23,6 +23,7 @@
     "react-spring": "^9.6.1",
     "sass": "^1.57.1",
     "scss": "^0.2.4",
+    "smooth-scrollbar": "^8.8.1",
     "styled-components": "^5.3.6",
     "three": "^0.148.0",
     "typewriter-effect": "^2.19.0"

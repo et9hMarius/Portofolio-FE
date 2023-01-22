@@ -39,7 +39,7 @@ export default function Four() {
       <div className="card-wrapper">
         {cardData.map((card, index) => (
           <Card
-            key={card.title}
+            key={index}
             id={index}
             src={card.src}
             title={card.title}

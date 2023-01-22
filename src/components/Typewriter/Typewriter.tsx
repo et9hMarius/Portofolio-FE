@@ -33,7 +33,6 @@ export default function Typewriter({
     } else {
       setText("");
     }
-    console.log(blink ? "blink" : "");
   }, [start]);
 
   return (

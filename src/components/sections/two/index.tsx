@@ -3,23 +3,30 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Stars } from "@react-three/drei";
 import { useEffect, useState } from "react";
-
+import { useSpring, animated } from "react-spring";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import Typewriter from "../../Typewriter/Typewriter";
+
 const useScrollPosition = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [rawScrollPosition, setRawScrollPosition] = useState(0);
+  const props = useSpring({
+    rawScrollPosition,
+    config: { mass: 1, tension: 200, friction: 20 },
+    // @ts-ignore
+    onUpdate: ({ rawScrollPosition }) =>
+      setRawScrollPosition(rawScrollPosition),
+  });
+
   useEffect(() => {
     const updatePosition = () => {
-      setScrollPosition(window.pageYOffset);
-      //check if element with id one is in view
+      setRawScrollPosition(window.pageYOffset);
     };
     window.addEventListener("scroll", updatePosition);
     updatePosition();
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
-
-  return scrollPosition;
+  return props.rawScrollPosition.get();
 };
 
 const useWindowSize = () => {
@@ -58,7 +65,7 @@ function Rocket() {
     <primitive
       angle={0.3}
       rotation={[90, 0, -45]}
-      position={[0, 14 - scrollPosition / 70, 0]}
+      position={[0, 16 - scrollPosition / 70, 0]}
       object={scene}
     />
   );
@@ -80,9 +87,10 @@ export default function Two() {
     if (element) {
       const rect = element.getBoundingClientRect();
       if (
-        rect.top >= 0 &&
+        rect.top >= -200 &&
         rect.left >= 0 &&
-        rect.bottom <= (height || document.documentElement.clientHeight) &&
+        rect.bottom <=
+          (height || document.documentElement.clientHeight) + 200 + 200 &&
         rect.right <= (width || document.documentElement.clientWidth)
       ) {
         //if it has a hidden class remove it
@@ -105,9 +113,10 @@ export default function Two() {
     if (element) {
       const rect = element.getBoundingClientRect();
       if (
-        rect.top >= 0 &&
+        rect.top >= -200 &&
         rect.left >= 0 &&
-        rect.bottom <= (height || document.documentElement.clientHeight) &&
+        rect.bottom <=
+          (height || document.documentElement.clientHeight) + 200 &&
         rect.right <= (width || document.documentElement.clientWidth)
       ) {
         //if it has a hidden class remove it
@@ -130,9 +139,10 @@ export default function Two() {
     if (element) {
       const rect = element.getBoundingClientRect();
       if (
-        rect.top >= 0 &&
+        rect.top >= -200 &&
         rect.left >= 0 &&
-        rect.bottom <= (height || document.documentElement.clientHeight) &&
+        rect.bottom <=
+          (height || document.documentElement.clientHeight) + 200 &&
         rect.right <= (width || document.documentElement.clientWidth)
       ) {
         //if it has a hidden class remove it
@@ -155,9 +165,10 @@ export default function Two() {
     if (element) {
       const rect = element.getBoundingClientRect();
       if (
-        rect.top >= 0 &&
+        rect.top >= -200 &&
         rect.left >= 0 &&
-        rect.bottom <= (height || document.documentElement.clientHeight) &&
+        rect.bottom <=
+          (height || document.documentElement.clientHeight) + 200 &&
         rect.right <= (width || document.documentElement.clientWidth)
       ) {
         //if it has a hidden class remove it
@@ -179,14 +190,14 @@ export default function Two() {
   }, [scrollPosition, width, height]);
 
   return (
-    <div className="two">
+    <div className="two" id="overview">
       <div className="quote unselectable">
-        {Array(10).fill(
-          <>
+        {Array(10).map((number) => (
+          <React.Fragment key={number}>
             <div className="bottom">THE STARS</div>
             <div className="top">REACH FOR</div>
-          </>
-        )}
+          </React.Fragment>
+        ))}
       </div>
       <Canvas>
         <Stars radius={75} depth={200} count={4000} factor={4} speed={0} />

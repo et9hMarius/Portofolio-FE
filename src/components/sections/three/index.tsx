@@ -9,7 +9,7 @@ export default function Three() {
     if (scene) var parallaxInstance = new Parallax(scene);
   }, []);
   return (
-    <div className="three">
+    <div className="three" id="projects">
       <div id="scene" className="title-box">
         <div data-depth="0.4" className="title">
           projects
