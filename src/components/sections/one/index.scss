@@ -39,6 +39,27 @@ $grey: #242424;
       font-size: 0.9rem;
       font-weight: 400;
       letter-spacing: 0.4rem;
+      line-height: 200%;
+    }
+
+    .grey {
+      color: #f0f0f09b;
+    }
+
+    .unicorn {
+      background-image: linear-gradient(
+        to left,
+        violet,
+        rgb(185, 91, 252),
+        rgb(111, 166, 255),
+        green,
+        yellow,
+        orange,
+        red
+      );
+      -webkit-background-clip: text;
+      color: transparent;
+      opacity: 0.8;
     }
   }
   .arrow {

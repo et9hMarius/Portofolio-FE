@@ -11,7 +11,7 @@ $grey: #242424;
   position: relative;
   background: $dark_blue;
   background-size: contain;
-  height: 2000px;
+  height: 2500px;
   margin: -150px 0 -150px;
   canvas {
     height: 100%;
@@ -39,12 +39,12 @@ $grey: #242424;
     }
     .card-info {
       margin: 5rem 0;
-      width: 30vw;
+      width: 100%;
       height: fit-content;
       background: rgba(0, 7, 22, 0.664);
       border-radius: 20px;
       padding: 0.5rem;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.3s ease-in-out;
       .card-info-title {
         font-family: "Roboto Mono";
         font-size: 1.5rem;
@@ -56,22 +56,25 @@ $grey: #242424;
         text-align: justify;
         .card-info-content-text {
           font-family: "Roboto Mono";
-          font-size: 1rem;
+          font-size: 0.9rem;
           color: $white;
           padding: 1rem;
           div {
             transition: all 0.3s ease-in-out;
+          }
+          ul {
+            padding-left: 1.5rem;
           }
         }
       }
     }
 
     .left {
-      grid-column: 2/6;
+      grid-column: 2/9;
     }
 
     .right {
-      grid-column: 10/12;
+      grid-column: 12/19;
     }
   }
 }

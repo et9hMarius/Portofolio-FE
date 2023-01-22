@@ -21,6 +21,14 @@ export default function One() {
         <div className="name lastname">Mircioagă</div>
         <br />
         <div className="subtitle">- full-stack software developer -</div>
+        <div className="subtitle grey">&</div>
+        <div className="subtitle grey">
+          - proud{" "}
+          <a href="https://unicorn-tech.org/" className="unicorn">
+            unicorn
+          </a>{" "}
+          -
+        </div>
       </div>
       <div className="arrow">
         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
