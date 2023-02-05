@@ -1,0 +1,120 @@
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$light_blue: #a8d0e6;
+$blue: #374785;
+$dark_blue: #060b15;
+$white: #f0f0f0;
+$black: #102526;
+$grey: #242424;
+
+.Project {
+  position: relative;
+  padding-bottom: 100px;
+  .navbar {
+    min-height: 60px;
+    color: #d1d1d1;
+    background: #060b155f;
+    //box shadow bellow #060b155f
+    box-shadow: 0px 40px 18px rgb(6 11 21 / 37%);
+
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0px;
+
+    * {
+      transition: color 0.25s ease-in-out;
+    }
+    .back {
+      grid-column: 3;
+      padding: 20px 0;
+      a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+          color: white;
+        }
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+  .project {
+    margin-top: 60px;
+    grid-column: 6/15;
+    text-align: justify;
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 1em;
+      ul {
+        margin: auto;
+        width: fit-content;
+      }
+    }
+
+    #main-photo {
+      display: flex;
+      justify-content: center;
+      img {
+        max-width: 50%;
+      }
+    }
+    #links {
+      p {
+        text-align: center;
+      }
+      * {
+        transition: color 0.25s ease-in-out;
+      }
+      a {
+        text-decoration: none;
+        color: $light_blue;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    #carousel {
+      .carousel-slider {
+        padding-bottom: 40px;
+      }
+      .thumbs-wrapper {
+        display: flex;
+        justify-content: center;
+        .thumbs {
+          padding: 0;
+        }
+        ul {
+          width: fit-content;
+        }
+        .thumb {
+          border: 3px solid #333;
+        }
+        .selected {
+          border: 3px solid #ccc;
+        }
+      }
+    }
+  }
+}

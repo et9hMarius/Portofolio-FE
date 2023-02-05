@@ -201,19 +201,22 @@ body {
     background: #000a1b;
     border-top: 0;
     padding: $inner-margin;
-    @include mq-lg {
-      height: $body-height;
-    }
     p {
       font-size: 14px;
       line-height: 18px;
       margin-bottom: $inner-margin;
     }
     img {
+      border-radius: 10px;
       opacity: 50%;
       display: block;
       width: 100%;
       max-height: 75%;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        opacity: 100%;
+      }
     }
   }
   @for $i from 1 through $items {

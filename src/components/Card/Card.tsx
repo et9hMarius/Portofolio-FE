@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Card.scss";
 
 export default function Card({
@@ -25,7 +26,9 @@ export default function Card({
       </div>
       <div className="body">
         <p>{summary}</p>
-        <img src={src} alt="Graphic" />
+        <a target="_blank" href={`/project/${id}`}>
+          <img src={src} alt="Graphic" />
+        </a>
       </div>
     </div>
   );
