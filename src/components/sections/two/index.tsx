@@ -192,8 +192,9 @@ export default function Two() {
   return (
     <div className="two" id="overview">
       <div className="quote unselectable">
-        {Array(10).map((number) => (
-          <React.Fragment key={number}>
+        {/*repeat div 10 times*/}
+        {[...Array(10)].map((e, i) => (
+          <React.Fragment key={i}>
             <div className="bottom">THE STARS</div>
             <div className="top">REACH FOR</div>
           </React.Fragment>

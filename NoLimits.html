@@ -1,0 +1,65 @@
+<h1>No Limits</h1>
+<section>
+	<h2>Overview:</h2>
+	<p> As a web user, it's important to be mindful of how we spend our time online. That's why I created <b>No Limits</b>, to help track and visualize your web habits. </p>
+	<p> With its focus on time tracking, you'll gain valuable insights into your web activity and be able to identify areas where you can improve. Discover new habits and make the most of your time spent on the web. </p>
+	<p> Gain a comprehensive understanding of your data with clear and interactive graphs and charts, allowing for an easy and intuitive way to identify trends and patterns. </p>
+</section>
+<section>
+	<h2>Features:</h2>
+	<ul>
+		<li>Simple, visually pleasing UI</li>
+		<li>Quick overview of your most visited sites</li>
+		<li>Data visualization</li>
+		<li>Interactive date selection</li>
+		<li>To-do list management</li>
+		<li>Quick note-taking capabilities</li>
+	</ul>
+	<div id="carousel">
+		<img src="https://raw.githubusercontent.com/et9hMarius/No-Limits---Web-Tracker-and-Personal-Notebook/main/screenshots/storefront-marquee-promo.png" />
+		<img src="https://raw.githubusercontent.com/et9hMarius/No-Limits---Web-Tracker-and-Personal-Notebook/main/screenshots/storefront-1.png" />
+		<img src="https://raw.githubusercontent.com/et9hMarius/No-Limits---Web-Tracker-and-Personal-Notebook/main/screenshots/storefront-2.png" />
+	</div>
+</section>
+<section>
+	<h2>Check it out!</h2>
+	<p>
+		<FontAwesomeIcon icon="fa-light fa-puzzle-piece" />
+		<span> Get it from the </span>
+		<a href="#"> chrome web store! </a>
+	</p>
+	<p>
+	<p>
+		<FontAwesomeIcon icon="fa-brands fa-github" />
+		<span> View the source code on <a href="https://github.com/et9hMarius/No-Limits---Web-Tracker-and-Personal-Notebook"> GitHub </a>
+		</span>
+	</p>
+</section>
+<section>
+	<h2>In-Depth:</h2>
+	<p> No Limits is a Chrome browser extension built using React and Create-React-App. It uses JavaScript and SCSS as its programming languages and is compiled into static files. The extension leverages the Chrome extension API to track the time spent on websites and store the data in a notepad. </p>
+	<p> The data collected is displayed in the form of a pie chart with a legend and in a table format. The user has the option to choose a date range to display the data and can move forwards or backwards in time by one day or choose a specific date using an interactive calendar. The visual design of the extension is calming and pleasing to the eye, with a dominant blue color that is associated with increased focus. </p>
+	<p> The notepad is one of the key features of No Limits. The switch between different "pages" is made possible using the Memory Router from react-router-dom, making it easy to navigate between the different sections. The notepad supports CRUD operations for notes, has an auto-height textarea, and tracks the time when a note is created or updated. The notepad supports multiple lines of text, ASCII art, emojis, and all the features you would expect from a text editor. The operations are fast and efficient, ensuring a smooth user experience. </p>
+	<p> The icon for No Limits is minimalist in design, with a pleasing color palette that is unique and eye-catching. The icon badge of the extension will track the time spent and display it in seconds, minutes, or hours. In summary, No Limits is a comprehensive time tracking and notepad tool built for the Chrome browser, with a focus on efficiency, visual design, and user experience. </p>
+</section>
+<section>
+	<h2>Development process:</h2>
+	<p> The development process of the No Limits Chrome Extension was a challenging yet enjoyable experience. This was my first time building a Chrome extension and I had to familiarize myself with the Chrome Extension API and the best practices for developing a Chrome extension.
+	<p> To start with, I decided to build a static website using only CSS, HTML, and JavaScript, which helped me to understand the basic principles of the Chrome API. During this phase, I was able to quickly reload the extension without having to build it, making it easier to test my code and learn from my mistakes. </p>
+	<p> Once I had a good understanding of the Chrome API, I moved on to the next step, which was to set up my manifest v3. This involved configuring the various permissions, background scripts, and popup pages required for the extension to function correctly. I also generated the icon for the project using AI and then refined it using Photoshop, where I created the other banners and images for the storefront. </p>
+	<p> One of the most critical aspects of the No Limits Chrome Extension is the background process, which keeps track of the time spent on the app. This script updates every second and takes into account when the user opens a new tab, switches URL, or closes a tab. It extracts the base URL of the current page using regex and stores it in a dictionary inside the Chrome storage. </p>
+	<p> It quickly became apparent that using React would save me a considerable amount of time, given the object-oriented nature of the project. This was due to the need to handle repeating code, scalability concerns, and to approach the project in a more modular way, as well as the use of libraries for displaying data and the notepad functionality. </p>
+	<p> The switch to React meant that I had to build the app before loading it in my browser, which could be a bit slow at times. I initially tried using Vite for my project, but I ran into some issues after building the app. I eventually switched to create-react-app, which seemed to resolve these issues. </p>
+	<p> However, the downside of using React was that I had to write Chrome API code blindly, because there was a significant delay between writing the code and actually testing it. But I see this as an advantage, as it forced me to write more robust code and make fewer mistakes. </p>
+	<p> Another characteristic of building a Chrome extension is that I had to use memory router instead of browser router, as extensions face some problems when using history and window location. This was a small issue, but it helped me to become more familiar with different routing options in React. </p>
+	<p> The front-end development of the No Limits Chrome Extension was smooth and enjoyable. I approached it creatively, trying to find a pleasant design and color palette, which I believe I succeeded in. There is certainly room for improvement, but I am pleased with the outcome. </p>
+	<p> The navigation bar component is composed of the icon, the name of the extension, and the ability to switch between the tracker and notepad app. The tracker component allows the user to change the date using arrows or by using the react-datepicker calendar. The donut graph is created using a graph library, while the table and legend are "handmade". </p>
+	<p> The notepad component has a sleek design, with the ability to save and delete notes by clicking the corresponding emojis. Feedback for these operations is instant. The extension also keeps track of the time when a note was created and updated, and it sorts them from the newest updated to the oldest. </p>
+	<p> After doing some refactoring and cleaning, I zipped the build folder and submitted it to the Chrome Extension Store for publishing. I also uploaded the project to a Git repository. </p>
+</section>
+<section>
+	<h2>Conclusion:</h2>
+	<p> In conclusion, the development of the No Limits Chrome Extension was a challenging but highly rewarding experience. The use of React with Create-React-App made the front-end development process smoother and easier to manage, while the Chrome Extension API provided a lot of opportunities to track and store data. The minimalist design, use of calming colors and the interactive pie chart and table to display data were all key elements in making the extension both visually appealing and user-friendly. </p>
+	<p> The notepad feature added an additional layer of functionality, providing users with the ability to take notes, track the time they were created and updated and perform CRUD operations, all while using a fast and easy-to-use interface. The process of publishing the extension to the Chrome Web Store and uploading it to a Git repository was straightforward and allowed the No Limits Chrome Extension to reach a wider audience. </p>
+	<p> Overall, the development process was a highly educational and enjoyable experience, teaching valuable lessons about how Chrome extensions and React work, as well as providing a new tool for users to increase their productivity and stay focused. </p>
+</section>
